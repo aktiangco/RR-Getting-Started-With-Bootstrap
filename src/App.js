@@ -1,58 +1,22 @@
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import Nav from 'react-bootstrap/Nav';
-import Form from 'react-bootstrap/Form'
+import NavBar from './components/NavBar'
+import Button from './components/ButtonBar';
+import Form from './components/Form';
+import DropDown from './components/DropDown'
 
 function App() {
+
   return (
     <div className="App">
       <h1>Bootstrap Website</h1>
-      {/* Adding NavBar */}
-      <Nav activeKey="/home">
-        <Nav.Item>
-        {/* Adding Button */}
-        <Button variant="success" href="/home">Home</Button> 
-        </Nav.Item>
-        <Nav.Item>
-          <Button variant="info" eventKey="/about">About Us</Button>
-        </Nav.Item>
-      </Nav>
-      {/* adding Form */}
-      <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label>Form Dropdown with favorite movies</Form.Label>
-          {/* adding a Dropdown */}
-            <Form.Control as="select">
-              <option>Inception</option>
-              <option>Forrest Gump</option>
-              <option>Shawshank Redemption</option>
-              <option>Spiderman: Into the Spiderverse</option>
-              <option>Avengers: Endgame</option>
-            </Form.Control>
-        </Form.Group>
-
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-      </Form>
-
+      {/* Render NavBar */}
+      <NavBar />
+      {/* Render Button */}
+      <Button />
+      {/* Render Form */}
+      <Form />
+      {/* Render DropDown */}
+      <DropDown />
     </div>
   );
 }
